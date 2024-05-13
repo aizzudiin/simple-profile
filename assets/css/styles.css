@@ -1,0 +1,407 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Palanquin', sans-serif;
+  color: #7C3042;
+  background-color: #F9CDD4;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+figcaption {
+  font-family: 'patua one', sans-serif;
+  text-align: center;
+  font-size: large;
+}
+
+
+header.nav-container {
+  width: 100%;
+  padding: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #E27589;
+  top: 0;
+  position: sticky;
+  box-sizing: border-box;
+
+}
+
+header.nav-container .yae-logo img {
+  width: 250px;
+}
+
+header.nav-container .nav-li ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.nav-container .nav-li li {
+  list-style-type: none;
+  font-family: 'patua one';
+
+
+}
+
+header.nav-container .nav-li li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+header.nav-container .nav-li li:hover a {
+  color: #7C3042;
+  background-color: #F9CDD4;
+
+}
+
+h2 {
+  font-family: 'Madimi One', sans-serif;
+  color: white;
+  margin-left: 25px;
+  font-size: 3.5rem;
+
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  max-width: 100%;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+main .profile {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 25px;
+  padding: 2rem 4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+}
+
+main .profile .content-description {
+  flex: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  border-style: solid #E27589;
+  padding: 20px;
+
+}
+
+main .profile .content-description .title-profile {
+  margin: 1rem;
+  font-size: 3.5rem;
+}
+
+main .profile .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: justify;
+}
+
+main .profile .potrait-yae {
+  flex: 1;
+  display: flex;
+}
+
+main .profile .potrait-yae img {
+  width: 400px;
+  min-width: 250px;
+  margin: auto;
+}
+
+.fig-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+.fig-container img {
+  width: 400px;
+}
+
+.card {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  flex: content;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+
+.Cons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Cons-container .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.Cons-container img {
+  width: 50px;
+}
+
+.Cons-container p {
+  background-color: #ECA1AC;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+}
+
+.Cons-container p strong {
+  font-family: 'madimi one', sans-serif;
+  font-size: 24px;
+  color: white;
+}
+
+.profile-card img {
+  width: 200px;
+}
+
+.profile-card header {
+  text-align: center;
+  font-family: 'madimi one', sans-serif;
+}
+
+.profile-card header h3 {
+  color: white;
+  font-size: 24px;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+#openAside {
+  background-color: #E27589;
+  font-family: 'patua one', sans-serif;
+  color: white;
+  font-size: 18px;
+
+  border: none;
+  border-radius: 25px; 
+  width: 100px; 
+  height: 60px; 
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#openAside:hover {
+  background-color: #7C3042;
+  font-size: 20px;
+  transition: font-size 0.3s ease;
+}
+
+.aside-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.aside-popup.active {
+  display: flex;
+}
+
+.aside-popup .aside-container {
+  
+    max-width: 100%;
+    background-color: #ECA1AC;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 20px;
+  
+    margin-inline: 150px;
+    margin-top: 75px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+@media screen and (max-width: 768px) {
+  .aside-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-card img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  th,
+  td {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Cons-container .item {
+    width: 100%;
+  }
+
+  .cons-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .Cons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Cons-container img {
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #7C3042;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1500px) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .profile {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .profile .potrait-yae {
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: nowrap;
+  }
+
+  .fig-container {
+    flex-wrap: wrap;
+  }
+
+  .fig-container img {
+    width: 250px;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header.nav-container {
+    flex-direction: column;
+  }
+
+  header.nav-container .nav-li ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .profile .potrait-yae {
+    width: 300px;
+  }
+
+  .profile .content-description .title-profile {
+    font-size: 3rem;
+  }
+
+  .profile .content-description p {
+    font-size: 1rem;
+  }
+
+}
+
